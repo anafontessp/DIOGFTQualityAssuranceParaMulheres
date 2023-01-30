@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "agenciaid": {
+      "type": "integer"
+    },
+    "agencia": {
+      "type": "object",
+      "properties": {
+        "fullname": {
+          "type": "string"
+        },
+        "totalprice": {
+          "type": "integer"
+        },
+        "depositpaid": {
+          "type": "boolean"
+        },
+        "compras": {
+          "type": "object",
+          "properties": {
+            "checkin": {
+              "type": "string"
+            },
+            "checkout": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "checkin",
+            "checkout"
+          ]
+        },
+        "additionalneeds": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "fullname",
+        "totalprice",
+        "depositpaid",
+        "compras",
+        "additionalneeds"
+      ]
+    }
+  },
+  "required": [
+    "agenciaid",
+    "agencia"
+  ]
+}

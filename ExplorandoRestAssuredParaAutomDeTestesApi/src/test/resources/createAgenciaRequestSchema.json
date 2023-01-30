@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "properties": {
+    "agenciaid": {
+      "type": "integer"
+    },
+    "agencia": {
+      "type": "object",
+      "properties": {
+        "fulltname": {
+          "type": "string"
+        },
+        "totalprice": {
+          "type": "number"
+        },
+        "depositpaid": {
+          "type": "boolean"
+        },
+        "compras": {
+          "type": "object",
+          "properties": {
+            "checkin": {
+              "type": "string"
+            },
+            "checkout": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "checkin",
+            "checkout"
+          ]
+        },
+        "additionalneeds": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "fulltname",
+        "totalprice",
+        "depositpaid",
+        "compras"
+      ]
+    }
+  }
+}
